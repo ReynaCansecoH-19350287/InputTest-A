@@ -17,9 +17,7 @@ function App() {
     number:"",
     radio:"",
     range:"",
-    reset:"",
     search:"",
-    submit:"",
     tel:"",
     time:"",
     url:"",
@@ -31,7 +29,7 @@ function App() {
       ...inputValue,
       [e.target.name]: e.target.value,
     });
-    console.log(inputValue);
+    console.log(e.target.name, e.target.value);
   }
   
   return (
@@ -205,17 +203,6 @@ function App() {
     </label>
     <br />
     <label>
-      Reset
-      <input 
-      className="mt-2"
-      name="reset"
-      onChange={(e) => handleInputChange(e)}
-      type="reset" 
-      value={inputValue.reset}
-      />
-    </label>
-    <br />
-    <label>
       Search
       <input 
       className="mt-2"
@@ -223,17 +210,6 @@ function App() {
       onChange={(e) => handleInputChange(e)}
       type="search" 
       value={inputValue.search}
-      />
-    </label>
-    <br />
-    <label>
-      Submit
-      <input 
-      className="mt-2"
-      name="submit"
-      onChange={(e) => handleInputChange(e)}
-      type="submit" 
-      value={inputValue.submit}
       />
     </label>
     <br />
